@@ -1,0 +1,19 @@
+
+
+version: '2'
+
+services:
+  bind9:
+    image: internetsystemsconsortium/bind9:9.16
+    ports:
+    - 53:53
+    volumes:
+      - configpablo1:/etc/bind
+      - configpablo2:/var/cache/bind
+      - configpablo3:/var/lib/bind
+      - configpablo4:/var/log
+volumes:
+  configpablo1:
+  configpablo2:
+  configpablo3:
+  configpablo4:
